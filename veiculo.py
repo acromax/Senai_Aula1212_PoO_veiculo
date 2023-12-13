@@ -33,7 +33,7 @@ class Veiculo(object):
     # Retorno de dados da classe
     def __str__(self):
         return (
-            '\n Marca: ' + str(self.getMarca()) +
+            ' Marca: ' + str(self.getMarca()) +
             '\n Modelo: ' + str(self.getModelo()) +
             '\n Cor: ' + str(self.getCor()) +
             '\n Velocidade: ' + str(self.getVelocidade()) + 'kmm/h'
@@ -43,3 +43,8 @@ class Veiculo(object):
     def acelerar(self):
         if self.velocidade < 120:
             self.velocidade+=1
+
+    # Método Frear
+    def frear(self):
+        if self.velocidade > 0:
+            self.velocidade-=1
